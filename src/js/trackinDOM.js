@@ -7,13 +7,11 @@ $.fn.story = function(text,options){
                         time : 0,
                         classes:'.story',
                         callback:undefined,
-                        interval:1000,         
+                        interval:4000,         
                 },options)
 
                 var elem =$(this)
-                
-              
-                
+             
                 var callcallback=function(loctime){
                         if(typeof opts.callback == 'function'){
                                 opts.callback.call(elem)         
@@ -37,20 +35,17 @@ $.fn.story = function(text,options){
                                         display()                                     
                                     }
                                     
-                                
-          
                 }
                  
                 var story = elem.find(opts.classes)
-                if (story.size() <=0){
-                        
+                if (story.size() <=0){                 
                         var story= $("<div class='"+opts.classes.substring(1)+"'/>")
                         story.data('time',opts.time*opts.interval)
                         elem.append(story)
                         storySettings(story)
                 }else{
                     var curmaxtime= story.data('time')
-                    story.data('time',curmaxtime+Math.max(opts.time*opts.interval,2000))
+                    story.data('time',curmaxtime+Math.max(opts.time*opts.interval,opts.interval))
                     storySettings(story)   
                    }
                 return this
@@ -95,7 +90,9 @@ $.fn.playerDev = function(){
 $.fn.fall = function(){
         var elem = this
         var midsize = $(window).height()/2
-        elem.fadeIn().animate({"bottom": "-="+midsize+"px"},3000);
+        //elem.css('top','0px')
+        //elem.css('top','')
+        elem.fadeIn().animate({"bottom": "-="+midsize+"px"},10000);
 
 }
 })( jQuery );

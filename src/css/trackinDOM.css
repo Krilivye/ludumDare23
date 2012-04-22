@@ -1,24 +1,57 @@
+@import url(http://fonts.googleapis.com/css?family=Press+Start+2P);
+@import url(http://fonts.googleapis.com/css?family=Diplomata);
+@import url(http://fonts.googleapis.com/css?family=Audiowide);
+
+
 #game{
+width:100%;
+height:100%;
+}
+
+.story{
+ font-family: 'Audiowide', cursive;
+ padding:1em;
+ word-wrap: break-word;
 }
 
 #intro{
   margin-left: auto;
   margin-right: auto;
-  width: 200px;     
+  width: 20%;     
   margin-top:200px;
 }
-#intro .mainTitle{
 
+#intro .mainTitle{
+ font-family: 'Diplomata', cursive;
+ font-size:250%;
 }
+
 #intro .subTitle{
 
 }
+
+#mainstory{
+  border-radius:25px; 
+  box-shadow: 10px 10px 5px #888888;
+  margin-top:200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;     
+}
+
 #game .dev .story{
+  font-family: 'Press Start 2P', cursive;
   width: 200px;
   margin-left:50px;
   background:rgb(255,140,0);
+  border:2px solid;
+
+  border-radius:25px; 
+  box-shadow: 10px 10px 5px #888888;
   display:none;
 }
+
+
 #game .dev{
   background-image:url(../../assets/stand.png);
   position:absolute;

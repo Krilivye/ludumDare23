@@ -9,8 +9,10 @@ $(document).ready(function(){
                             {classes:'.subTitle',
                              time:2,
                              callback:function(){
+                                         setTimeout(function(){
 	                                 $('#game').empty();
                                                 demarrerStory();
+                                                },6000)
                                         }
                                  }
                        );
@@ -36,19 +38,23 @@ $(document).ready(function(){
                         .story('Using gedit and emacs.')
                         .story('On a linux computer')
                         .story('Coded for and debbuged in firexfox')*/
-                        .story('Not tested on IE, sorry',{callback:function(){creatingDev()}})
+                        .story('Not tested on IE, sorry')
                         .story('Hey wait a minute')
                         .story('Something strange append here.')
                         .story('Why is this not loading?')
-                        .story('What’s happening?')
-                        .story('There’s some lights over there. Can’t see anything!!!!!',{callback:function(){
-                                $('#mainstory').empty();
-                                
-                        }})
-                        
+                        .story('What’s happening?',{callback:function(){creatingDev()}})
+                        .story('There’s some lights over there. Can’t see anything!!!!!',{callback:function(){setTimeout(function(){
+                                $('#mainstory').empty();                               
+                        },3000)}})                     
         }
         
         var creatingDev = function(){
+        var mainstory =$("<div id='mainstory'/>")
+                
+                $('#game').append(mainstory)
+                mainstory
+                        .story('This game  do not store anything on any server.  Every things append localy.')
+                        
                 var dev = $('#game').playerDev();
                 dev.fall();
                 dev.story('Yaaaaaaaaaahhhhhhhhh')
@@ -57,7 +63,7 @@ $(document).ready(function(){
                         .story('Ah')
                         .story('a',{callback:function(){
                                 $(this).empty()}});
-                
+               
         }
         
         creatingDev();
