@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+                    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="../css/trackinDOM.css" type="text/css" media="screen" />
+  <script src="../../lib/jquery-1.7.2.js"></script>
+
+
+<script type="text/javascript" src="../js/trackinDOM.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$('#game')
+                .story('Ludum Dare 23')
+                .story('Stuck in the DOM World',{classes:'.subTitle',time:2},function(){
+	       $('#game').empty();
+                demarrerStory();
+	});
+
+
+         var demarrerStory = function(){
+                $('#game')
+                        .story('This game  do not store anything on any server.  Every things append localy.')
+                        .story('The game will start in several seconds, or minutes, depending on your connection'
+        )
+                       .story('I think you will enjoy It')
+                        .story('By the way i’m a young developper. And I’m realy happy to do this LD.')
+                        .story('So credits: Pierre Bousquié')
+                        .story('Use JQuery and other Javascript library.')
+                        .story('Please do not use refresh button. I can’t save the state of the game.')
+                        .story('No pixels were harmed during the development')
+                        .story('Used 750words.com to make the whole storie Yep 750 Words')
+                        .story('Graphics made on inkscape')
+                        .story('Animation hand made with JQuery')
+                        .story('CSS')
+                        .story('Using gedit and emacs.')
+                        .story('On a linux computer')
+                        .story('Coded for and debbuged in firexfox')
+                        .story('Not tested on IE, sorry')
+                        .story('Hey wait a minute')
+                        .story('Something strange append here.')
+                        .story('Why is this not loading?')
+                        .story('What’s happening?')
+                        .story('There’s some lights over there. Can’t see anything!!!!!')
+                        .story('Yaaaaaaaaaahhhhhhhhh')
+                        .story('AAAAAAAAAAAAAAAH')
+                        .story('AH')
+                        .story('Ah')
+                        .story('a',{},function(){
+                                $('#game').empty();
+                                creatingDev();
+                        })
+                        
+        }
+        
+        var creatingDev = function(){
+                $('#game').playerDev();
+        }
+ 
+
+});
+</script>
+  
+</head>
+<body>
+<div id="game"></div>
+</body>
+</html>

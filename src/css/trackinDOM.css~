@@ -1,0 +1,25 @@
+#game{
+}
+
+#intro{
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;     
+  margin-top:200px;
+}
+#intro .mainTitle{
+
+}
+#intro .subTitle{
+
+}
+#game .story{
+  width: 200px;
+  margin-left:50px;
+  background:rgb(255,140,0);
+  display:none;
+}
+#game .dev{
+  background-image:url(../../assets/stand.png);
+  position:absolute;
+}
