@@ -39,7 +39,7 @@ height:100%;
   width: 20%;     
 }
 
-#game .dev .story{
+.dev .story{
   font-family: 'Press Start 2P', cursive;
   width: 200px;
   margin-left:50px;
@@ -52,7 +52,7 @@ height:100%;
 }
 
 
-#game .dev{
+.dev{
   background-image:url(../../assets/stand.png);
   position:absolute;
 }
